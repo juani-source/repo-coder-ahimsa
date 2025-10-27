@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+/*reset de estilos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*fin de reset*/
+
+/* encabezado de index*/
+
+body{
+    /*display: flex;*/
+    background-color: rgb(3, 3, 3);
+    }
+
+*{
+    font-family: "Playfair Display SC", serif;
+}
+
+.nombre{
+    /*display: flex;*/
+    align-items: center;
+    }
+
+
+
+.navclas ul li{
+    align-items: center;
+    list-style: none ;
+}
+
+
+
+/*.logo{
+    height: 8px;
+    align-items: center;
+}*/
+
+ul{
+    /*display: flex;*/
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+.whatsapp{
+    display: flex;
+    position: sticky;
+    position: fixed;
+    justify-content: right;
+    height: 10vh;
+    bottom: 50px;
+    right: 20px;
+}
+
+footer{
+    background-color: rgb(220, 233, 236);
+    display: grid;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+    
+
+
+.lista li{
+    border:  2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline;
+
+}
+
+.footer ul li{
+    list-style: none;
+    
+    
+}
+
+p{
+    /*display: flex;*/
+    justify-content: center;
+    border: 5px;
+    background-color: azure;
+    margin: 2px;
+    padding: 5vh;
+    border-radius: 10px;
+}
+.rrss{
+    height: 5vh;
+    
+}
+/*fin de encabezado*/
+
+/*comienzo de section*/
+
+.article{
+    /*display: flex;*/
+    padding: 20px 20px 20px 20px
+}
+
+/*comienzo de contacto*/
+
+.main-contacto{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-row: 2 / 8;
+    margin: 10 px;
+    }
+
+.form{
+    width: 30vw;
+    display: grid;
+    margin: 20 px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    order: 2;
+    grid-column: 2 / 3;
+    
+}
+
+.youtube{
+    order: 1;
+    width: 30vw;
+    grid-column: 2 / 3;
+}
+
+.mapa{
+    display: grid;
+    order: 3;
+    grid-column: 2 / 3;
+    margin: 30px;
+    justify-content: center;
+    height: 30vh;
+    width: 25vw;
+}
+
+iframe{
+    width: 30vh;
+}
+
+input{
+    height: 5vh;
+}
+
+/*comienzo de galeria*/
+
+.galeria{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(3 , 1fr);
+    margin: 20px 20px 20px 20px;
+    font-size: 0.5rem;
+    
+}
+
+.galeria img{
+    background-color: gray;
+}
+
+.galeria img:hover{
+    background-color: gray;
+    lighting-color: lightgray;
+    transform: scale(1.15);
+}
+
+/*fin de galeria*/
+
+/*comienzo de albumes grids*/
+
+.container {
+    margin: 80px auto;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat (1fr);
+    grid-template-rows: repeat (10, 1fr);
+    justify-content: center;
+    font-size: 0.5rem;
+}
+
+.header{
+    background-color: rgb(255, 255, 255);
+    text-decoration: black;
+    grid-column: 1 / 2;
+    display: grid;
+    justify-content: space-around;
+    grid-row: 1 / 1;
+    justify-items: center;
+
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+.navclas{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    text-decoration: black;
+}
+
+
+.nombre{
+    grid-column: 1 , 4;
+}
+
+main{
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 3 / 8;
+}
+
+.footer{
+    background-color: azure;
+    grid-column: 1 / 2;
+    grid-row: 9 / 10;
+
+    display: grid;
+    grid-template-columns: (3 , 1fr);
+    grid-template-rows: 3fr;
+    
+}
+
+.der{
+    grid-row: 2 / 3;
+    grid-template-columns: 1 / 2;
+    font-size: 1rem;
+}
+
+.crea{
+    grid-row: 2 / 3;
+    grid-column: 2 /3;
+    font-size: 1rem;
+}
+
+.redes{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-column: 3 / 3;
+    grid-row: 2 / 3;
+    list-style: none;
+    justify-content: right;
+    margin: 20px;
+}
+
+section img{
+    width: 30vh;
+}
+
+.item{
+    height: 90%;
+    width: 90%;
+    border-radius: 25px;
+}
+
+.lista{
+    margin-top: 6vh;
+        
+}
+
+
+
+.mainalbumes{
+    display: grid;
+    justify-content: center;
+    margin: 20px;
+    grid-row: 2 / 8;
+    grid-template-areas: 
+    "a a b b"
+    "c c d d"
+    "e e f f"
+    "g g h h"
+    "i i . .";
+}
+
+.a{
+    grid-area: a;
+}
+
+.b{
+    grid-area: b;
+}
+
+.c{
+    grid-area: c;
+}
+
+.d{
+    grid-area: d;
+}
+
+
+.e{
+    grid-area: e;
+}
+
+.f{
+    grid-area: f;
+}
+
+.g{
+    grid-area: g;
+}
+
+.h{
+    grid-area: h;
+}
+
+.i{
+    grid-area: i;
+}
+
+.ahimsacinco{
+    width:80vh;
+    height: 80vh;;
+}
+
+.Ahimsauno{
+    width:80vh;
+    height: 80vh;;
+}
+
+.ahimsados{
+    width:80vh;
+    height: 80vh;
+}
+
+.ahimsatres{
+    width:80vh;
+    height: 80vh;;
+}
+
+.ahimsacuatro{
+    width:80vh;
+    height: 80vh;;
+}
+
+.carousel{
+    display: grid;
+    justify-content: center;
+}
+
+
+
+@media (min-width:  320px) and (max-width: 430px){
+
+.header{
+    
+    display: grid;
+    grid-template-areas: 
+    "n l"
+    "nav nav";
+    grid-template-rows: repeat (5 , 1fr);
+    grid-template-columns: 1;
+    align-items: center;
+    font-size: 0.5rem;
+    
+    
+}
+
+.nombre{
+    justify-items: center;
+    grid-area: n;
+}
+
+.ahimsa{
+    grid-area: l;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+section{
+    font-size: 0.5rem;
+}
+
+.footer{
+    display: grid;
+    grid-template-areas: 
+    "der der"
+    "crea crea"
+    "redes redes";
+    justify-items: center;
+    align-items: center;
+    grid-row: 8 / 11;
+    font-size: 0.5rem;
+}
+
+.der{
+    justify-items: center;
+    grid-area: der;
+}
+
+.crea{
+    justify-items: center;
+    grid-area: crea;
+}
+
+.redes{
+    grid-area: redes;
+    justify-items: center;
+}
+
+.galeria{
+    display: grid;
+    justify-content: space-around;
+    grid-row: 2 / 8;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-areas: 
+    "banner1 banner2"
+    "banner2 banner3"
+    "banner4 banner5"
+    "banner6 banner7"
+    "banner8 banner9";
+}
+
+.banner1{
+    grid-area: banner1;
+}
+
+.banner2{
+    grid-area: banner2;
+}
+
+.banner3{
+    grid-area: banner3;
+}
+.banner4{
+    grid-area: banner4;
+}
+.banner5{
+    grid-area: banner5;
+}
+.banner6{
+    grid-area: banner6;
+}
+.banner7{
+    grid-area: banner7;
+}
+.banner8{
+    grid-area: banner8;
+}
+
+.banner9{
+    grid-area: banner9;
+}
+}
