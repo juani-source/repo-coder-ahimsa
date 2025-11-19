@@ -1,0 +1,30 @@
+@use 'variables' as v;
+
+footer{
+    height: 20vh;
+    text-decoration: none;
+    list-style: none;
+    background-color: v.$fuente_hover;
+    @include v.flex (row, space-around, center, wrap);
+    lista li{
+        border: 2px;
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+    .redes{
+        height: 5vh;
+        width: auto;
+        list-style: none;
+        
+        
+    }
+    .whatsapp{
+        height: 10vh;
+        width: 5vw;
+        position: fixed;
+        bottom: 100px;
+        right: 50px;
+    }
+
+}

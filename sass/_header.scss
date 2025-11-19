@@ -1,0 +1,41 @@
+@use "variables" as v;
+
+
+header{
+    background-color: v.$fuente_hover;
+    position: sticky;
+    top: 0;
+    .ahimsa{
+        height: 8vh;
+        width: auto;
+    }
+    .nombre{
+        align-items: center;
+    }
+    .navbar-nav{
+        .nav-link{
+            text-decoration: none;
+            color: v.$fuente_primaria;
+            border-radius: 5px;
+        }:hover{
+            color: v.$fuente_hover;
+        }
+        .nav-link.active{
+            text-decoration: black;
+            color: v.$fuente_primaria;
+        }
+        .nav-item{
+            border: borde;
+        }
+    }
+    .navclas ul li{
+        align-items: center;
+        list-style: none;
+    }
+    @include v.mobile{
+        .navbar-collapse{
+            flex-basis:100%;
+            flex-grow: 1;
+        }
+    }
+}
