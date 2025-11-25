@@ -1,0 +1,79 @@
+@use "variables" as v;
+
+.animate__animated animate__bounce{
+display: inline-block;
+margin: 0 0.5rem;
+
+animation: bounce; /* referring directly to the animation's @keyframe declaration */
+animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.even-main{
+    @include v.flex (column, center, center, wrap);
+    row-gap: 20 px;
+    background-color: v.$background-color;
+
+    .evento_ahimsa{
+        width: 70vw;
+        height: auto;
+    }
+.even-main{
+    @extend %card-eventos;
+}
+    .evento-ezeiza{
+        @extend %card-eventos;
+    }
+    .even-int{
+        @extend %card-eventos;
+    }
+    .taller{
+        @extend %card-eventos;
+    }
+    .tallerdos{
+        @extend %card-eventos;
+    }
+    .festival{
+        @extend %card-eventos;
+    }
+    .show{
+        @extend %card-eventos;
+    }
+    .beneficio{
+        @extend %card-eventos;
+        color: green;
+        p{
+            color: green;
+        }
+    }
+    }
+article{
+    display: flex;
+    column-gap: 150px;
+}
+
+@include v.mobile{
+    main.even-main{
+        margin: 0%;
+        
+    } 
+    article{
+        flex-direction: column;
+        row-gap: 50px;
+        width: 100vw;
+        padding: 10vw;
+        margin: top;
+        font-size: 1rem;
+        img{
+            width: 40vw;
+        }
+        h2{
+            font-size: 1rem;
+        }
+        h3{
+            font-size: 1rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    } 
+}

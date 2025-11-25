@@ -11,6 +11,21 @@
   background-color: azure;
 }
 
+.even-main .even-main, .even-main .evento-ezeiza, .even-main .even-int, .even-main .taller, .even-main .tallerdos, .even-main .festival, .even-main .show, .even-main .beneficio {
+  padding: 10px;
+  width: 60vw;
+  border: 2px solid black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.even-main .even-main .evento_ahimsa, .even-main .evento-ezeiza .evento_ahimsa, .even-main .even-int .evento_ahimsa, .even-main .taller .evento_ahimsa, .even-main .tallerdos .evento_ahimsa, .even-main .festival .evento_ahimsa, .even-main .show .evento_ahimsa, .even-main .beneficio .evento_ahimsa {
+  color: black;
+}
+
 header {
   background-color: white;
   position: sticky;
@@ -26,22 +41,40 @@ header .nombre {
 header .navbar-nav .nav-link {
   text-decoration: none;
   color: black;
+  border-radius: 5px;
 }
 header .navbar-nav :hover {
   color: white;
 }
 header .navbar-nav .nav-link.active {
-  text-decoration: none;
-  color: grey;
+  text-decoration: black;
+  color: black;
+}
+header .navbar-nav .nav-item {
+  border-radius: 5vh;
+  border: 1.5px solid rgb(7, 7, 7);
+  width: auto;
 }
 header .navclas ul li {
   align-items: center;
   list-style: none;
 }
-@media (min-width: 320px) and (max-width: 430px) {
+@media (min-width: 310px) and (max-width: 430px) {
   header .navbar-collapse {
     flex-basis: 100%;
     flex-grow: 1;
+  }
+  header .nav-link {
+    display: grid;
+    justify-content: center;
+  }
+  header .nav-link.active {
+    border-radius: 5vh;
+  }
+  header .nav-item:hover {
+    background-color: ghostwhite;
+    lighting-color: ghostwhite;
+    transform: scale 1.15;
   }
 }
 
@@ -56,17 +89,54 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-footer .redes {
-  height: 5vh;
-  width: auto;
+footer .lista li {
+  border: 2px;
+  padding: 5px;
+  border-radius: 5px;
+}
+footer .der {
+  font-size: 1rem;
+}
+footer .crea {
+  font-size: 1rem;
+}
+footer ul {
+  display: flex;
+  gap: 20px;
   list-style: none;
 }
 footer .whatsapp {
   height: 10vh;
-  width: 5vw;
+  width: 10vw;
   position: fixed;
-  bottom: 100px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
+}
+@media (min-width: 310px) and (max-width: 430px) {
+  footer {
+    display: grid;
+    grid-template-areas: "der der" "crea crea" "redes redes";
+    grid-row: 8/11;
+    font-size: 0, 5rem;
+    justify-items: center;
+    align-items: center;
+    column-gap: 30px;
+    text-align: center;
+  }
+}
+footer .der {
+  grid-area: der;
+}
+footer .crea {
+  grid-area: crea;
+}
+footer .redes {
+  grid-area: redes;
+}
+footer .whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
 
 .home {
@@ -76,23 +146,343 @@ footer .whatsapp {
   align-items: center;
   flex-wrap: wrap;
 }
-.home .article {
-  padding: 20px 20px 20px 20px;
-}
-.home .p {
-  border: 5px;
-  background-color: black;
+.home p {
+  border: 2px solid black;
+  background-color: azure;
   margin: 2px;
   padding: 5vh;
   border-radius: 10px;
+  margin: 5vh;
+  padding: 5vh;
 }
-@media (min-width: 320px) and (max-width: 430px) {
+@media (min-width: 310px) and (max-width: 430px) {
   .home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+  }
+}
+
+.animate__animated animate__bounce {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: bounce;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+  /* don't forget to set a duration! */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  height: 100vh;
+  width: auto;
+  background: #eeb1ae;
+  background: radial-gradient(circle, rgb(238, 177, 174) 24%, rgb(148, 187, 233) 78%, rgb(195, 207, 219) 92%);
+}
+.container .carousel {
+  width: 50vw;
+}
+.container .carousel img {
+  justify-items: center;
+  width: 30vh;
+  height: 30vh;
+}
+.container .carousel .carousel-inner:hover {
+  animation: bigger 2s ease-in forwards;
+  animation-fill-mode: both;
+}
+@keyframes bigger {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 2;
+  }
+}
+@media (min-width: 310px) and (max-width: 430px) {
+  .container {
+    flex-direction: column;
+  }
+  .container iframe {
+    width: 75vw;
+  }
+}
+
+.animate__animated animate__bounce {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.even-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20 px;
+  background-color: azure;
+}
+.even-main .evento_ahimsa {
+  width: 70vw;
+  height: auto;
+}
+.even-main .beneficio {
+  color: green;
+}
+.even-main .beneficio p {
+  color: green;
+}
+
+article {
+  display: flex;
+  column-gap: 150px;
+}
+
+@media (min-width: 310px) and (max-width: 430px) {
+  main.even-main {
+    margin: 0%;
+  }
+  article {
+    flex-direction: column;
+    row-gap: 50px;
+    width: 100vw;
+    padding: 10vw;
+    margin: top;
+    font-size: 1rem;
+  }
+  article img {
+    width: 40vw;
+  }
+  article h2 {
+    font-size: 1rem;
+  }
+  article h3 {
+    font-size: 1rem;
+  }
+  article p {
+    font-size: 1rem;
+  }
+}
+.animate__animated animate__bounce {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.main-contacto {
+  display: grid(row, center, center, wrap);
+  grid-row: 2/8;
+  grid-template-columns: repeat(3, 1fr);
+}
+.main-contacto .form {
+  width: 30vw;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: auto;
+  gap: 15 px;
+  order: 2;
+  grid-column: 2/3;
+  justify-items: center;
+}
+.main-contacto .form input {
+  background-color: grey;
+}
+.main-contacto .form .textarea {
+  margin-top: 10px;
+  height: 10vh;
+  background-color: black;
+}
+.main-contacto .youtube {
+  order: 1;
+  grid-column: 1/3;
+}
+.main-contacto .mapa {
+  order: 3;
+  grid-column: 3/3;
+}
+.main-contacto iframe {
+  width: 30vw;
+}
+@media (min-width: 310px) and (max-width: 430px) {
+  .main-contacto {
+    flex-direction: column;
+  }
+  .main-contacto .form {
+    width: 80vw;
+    order: 1;
+  }
+  .main-contacto iframe {
+    width: 75vw;
+  }
+  .main-contacto .youtube {
+    order: 2;
+  }
+  .main-contacto .mapa {
+    order: 3;
+  }
+}
+
+.contenedor-body {
+  max-width: 100%;
+}
+.contenedor-body .animate__animated animate__bounce {
+  display: inline-block;
+  margin: 0 0.5rem;
+  background: #eeb1ae;
+  background: radial-gradient(circle, rgb(238, 177, 174) 24%, rgb(148, 187, 233) 78%, rgb(195, 207, 219) 92%);
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+main.galeria {
+  margin-top: 25px;
+  display: grid;
+  grid-template-areas: "buno bdos" "btres bcuatro" "bcinco bseis" "bsiete bocho" "bnueve bdiez" "bonce bdoce" "btrece bcatorce";
+  justify-items: center;
+  align-items: center;
+  row-gap: 20px;
+}
+main.galeria img {
+  border: solid 1.5px black;
+  border-radius: 3vh;
+}
+
+.banneruno {
+  width: 30vw;
+  grid-area: buno;
+}
+
+.bannerdos {
+  grid-area: bdos;
+}
+
+.bannertres {
+  grid-area: btres;
+}
+
+.bannercuatro {
+  grid-area: bcuatro;
+}
+
+.bannercinco {
+  grid-area: bcinco;
+}
+
+.bannerseis {
+  grid-area: bseis;
+  width: 50px;
+}
+
+.bannersiete {
+  grid-area: bsiete;
+}
+
+.bannerocho {
+  grid-area: bocho;
+}
+
+.bannernueve {
+  grid-area: bnueve;
+}
+
+.bannerdiez {
+  grid-area: bdiez;
+}
+
+.banneronce {
+  grid-area: bonce;
+  width: 20vw;
+}
+
+.bannerdoce {
+  grid-area: bdoce;
+}
+
+.bannertrece {
+  grid-area: btrece;
+}
+
+.bannercatorce {
+  grid-area: bcatorce;
+}
+
+img:hover {
+  animation: bigger 2s ease-in forwards;
+  animation-fill-mode: both;
+}
+
+@keyframes bigger {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.7;
+  }
+}
+@media (min-width: 310px) and (max-width: 430px) {
+  .contenedor-body {
+    max-width: 100%;
+    width: 100vw;
+    background: #eeb1ae;
+    background: radial-gradient(circle, rgb(238, 177, 174) 24%, rgb(148, 187, 233) 78%, rgb(195, 207, 219) 92%);
+  }
+  main.galeria {
+    width: 30vw;
+    grid-template-areas: "buno" "bdos" "btres" "bcuatro" "bcinco" "bseis" "bsiete" "bocho" "bnueve" "bdiez" "bonce" "bdoce" "btrece" "bcatorce";
+  }
+  main.galeria .banneruno {
+    grid-area: buno;
+  }
+  main.galeria .bannerdos {
+    grid-area: bdos;
+  }
+  main.galeria .bannertres {
+    grid-area: btres;
+  }
+  main.galeria .bannercuatro {
+    grid-area: bcuatro;
+  }
+  main.galeria .bannercinco {
+    grid-area: bcinco;
+  }
+  main.galeria .bannerseis {
+    grid-area: bseis;
+  }
+  main.galeria .bannersiete {
+    grid-area: bsiete;
+  }
+  main.galeria .bannerocho {
+    grid-area: bocho;
+  }
+  main.galeria .bannernueve {
+    grid-area: bnueve;
+  }
+  main.galeria .bannerdiez {
+    grid-area: bdiez;
+  }
+  main.galeria .banneronce {
+    grid-area: bonce;
+    width: 20vw;
+  }
+  main.galeria .bannerdoce {
+    grid-area: bdoce;
+  }
+  main.galeria .bannertrece {
+    grid-area: btrece;
+  }
+  main.galeria .bannercatorce {
+    grid-area: bcatorce;
   }
 }
 

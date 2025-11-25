@@ -1,0 +1,55 @@
+@use "variables" as v;
+
+.animate__animated animate__bounce {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+}
+
+
+.container {
+    @include v.flex(row, center, center, wrap);
+    row-gap: 10px;
+    
+    height: 100vh;
+    width: auto;
+    background: #eeb1ae;
+    background: radial-gradient(circle, rgba(238, 177, 174, 1) 24%, rgba(148, 187, 233, 1) 78%, rgba(195, 207, 219, 1) 92%);
+
+    .carousel {
+        width: 50vw;
+        img{
+        justify-items: center;
+        width:30vh;
+        height: 30vh;
+        }
+    
+
+    .carousel-inner:hover {
+        animation: bigger 2s ease-in forwards;
+        animation-fill-mode: both;
+
+    }
+
+    @keyframes bigger {
+        0% {
+            scale: 1;
+        }
+
+        100% {
+            scale: 2;
+        }
+    }
+    }
+    @include v.mobile {
+        flex-direction: column;
+
+        iframe {
+            width: 75vw;
+        }
+    }
+}

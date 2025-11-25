@@ -3,11 +3,13 @@
 .home{
     @include v.flex(column, center, center, wrap);
         p{
-        border: 5px;
-        background-color: v.$fuente_secundaria;
+        border: 2px solid black;
+        background-color: v.$background-color;
         margin: 2px;
         padding: 5vh;
         border-radius: 10px;
+        margin: 5vh;
+        padding: 5vh;
         }
     @include v.mobile{
         @include v.flex(column, center, center, wrap)

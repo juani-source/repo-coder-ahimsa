@@ -1,0 +1,163 @@
+@use "variables" as v;
+
+.contenedor-body{
+    max-width: 100%;
+    .animate__animated animate__bounce{
+    display: inline-block;
+    margin: 0 0.5rem;
+    background: #eeb1ae;
+    background: radial-gradient(circle, rgba(238, 177, 174, 1) 24%, rgba(148, 187, 233, 1) 78%, rgba(195, 207, 219, 1) 92%);
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+}
+
+main.galeria{
+    margin-top: 25px;
+    display: grid;
+    grid-template-areas: 
+    "buno bdos"
+    "btres bcuatro"
+    "bcinco bseis"
+    "bsiete bocho"
+    "bnueve bdiez"
+    "bonce bdoce"
+    "btrece bcatorce";
+    justify-items: center;
+    align-items: center;
+    row-gap: 20px;
+    
+    img{
+        border: solid 1.5px black;
+        border-radius: 3vh;
+    }
+}
+.banneruno{
+    width: 30vw;
+    grid-area: buno;
+}
+.bannerdos{
+    grid-area: bdos;
+}
+.bannertres{
+    grid-area: btres;
+}
+.bannercuatro{
+    grid-area: bcuatro;
+}
+.bannercinco{
+    grid-area: bcinco;
+}
+.bannerseis{
+    grid-area: bseis;
+    width: 50px;
+}
+.bannersiete{
+    grid-area: bsiete;
+}
+.bannerocho{
+    grid-area: bocho;
+}
+.bannernueve{
+    grid-area: bnueve;
+}
+.bannerdiez{
+    grid-area: bdiez;
+}
+.banneronce{
+    grid-area: bonce;
+    width: 20vw;
+}
+.bannerdoce{
+    grid-area: bdoce;
+}
+.bannertrece{
+    grid-area: btrece;
+}
+.bannercatorce{
+    grid-area: bcatorce;
+}
+img:hover{
+    animation: bigger 2s ease-in forwards;
+    animation-fill-mode: both;
+}
+@keyframes bigger{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.7;
+    }
+}
+@include v.mobile {
+.contenedor-body{
+    max-width: 100%;
+    width: 100vw;
+    background: #eeb1ae;
+    background: radial-gradient(circle, rgba(238, 177, 174, 1) 24%, rgba(148, 187, 233, 1) 78%, rgba(195, 207, 219, 1) 92%);
+}
+main.galeria{
+    width: 30vw;
+    grid-template-areas: 
+    "buno"
+    "bdos"
+    "btres"
+    "bcuatro"
+    "bcinco"
+    "bseis"
+    "bsiete"
+    "bocho"
+    "bnueve"
+    "bdiez"
+    "bonce"
+    "bdoce"
+    "btrece"
+    "bcatorce";
+
+.banneruno{
+    
+    grid-area: buno;
+}
+.bannerdos{
+    grid-area: bdos;
+}
+.bannertres{
+    grid-area: btres;
+}
+.bannercuatro{
+    grid-area: bcuatro;
+}
+.bannercinco{
+    grid-area: bcinco;
+}
+.bannerseis{
+    grid-area: bseis;
+}
+.bannersiete{
+    grid-area: bsiete;
+}
+.bannerocho{
+    grid-area: bocho;
+}
+.bannernueve{
+    grid-area: bnueve;
+}
+.bannerdiez{
+    grid-area: bdiez;
+}
+.banneronce{
+    grid-area: bonce;
+    width: 20vw;
+}
+.bannerdoce{
+    grid-area: bdoce;
+}
+.bannertrece{
+    grid-area: btrece;
+}
+.bannercatorce{
+    grid-area: bcatorce;
+}
+}
+
+}

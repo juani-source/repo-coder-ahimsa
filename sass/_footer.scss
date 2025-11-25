@@ -6,25 +6,59 @@ footer{
     list-style: none;
     background-color: v.$fuente_hover;
     @include v.flex (row, space-around, center, wrap);
-    lista li{
+    .lista li{
         border: 2px;
         padding: 5px;
         border-radius: 5px;
-
     }
-    .redes{
-        height: 5vh;
-        width: auto;
-        list-style: none;
-        
-        
+    .der{
+        font-size: 1rem;
+    }
+    .crea{
+        font-size: 1rem;
+    }
+    ul{
+        display: flex;
+        gap: 20px;
+        list-style: none;  
     }
     .whatsapp{
         height: 10vh;
-        width: 5vw;
+        width: 10vw;
         position: fixed;
-        bottom: 100px;
-        right: 50px;
+        bottom: 30px;
+        right: 30px;
+    }
+    @include v.mobile{
+        display: grid;
+        grid-template-areas: 
+        "der der"
+        "crea crea"
+        "redes redes";
+        grid-row: 8 / 11;
+        font-size: 0,5rem;
+        justify-items: center;
+        align-items: center;
+        column-gap: 30px;
+        text-align: center;
     }
 
-}
+    .der{
+        grid-area: der;
+    }
+
+    .crea{
+        grid-area: crea;
+    }
+
+    .redes{
+        grid-area: redes;
+    }
+    .whatsapp{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    }
+

@@ -26,15 +26,33 @@ $fuente_hover: white;
     align-items: $align;
     flex-wrap: $wrap;
 }
+@mixin grid ($direction, $justify, $align, $wrap) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: auto;
+}
+
 
 //MIXIN RESPONSIVE
 
 @mixin mobile{
-    @media (min-width:  320px) and (max-width: 430px){
+    @media (min-width:  310px) and (max-width: 430px){
         @content;
     };
 }
 
+//EXTENDS
 
+%card-eventos{
+    padding: 10px;
+    width: 60vw;
+    border: 2px solid black;
+    border-radius: 25px;
+    @include flex(column, center, center, wrap);
+    .evento_ahimsa{
+        color: $fuente_primaria;
+    }
+}
 
 

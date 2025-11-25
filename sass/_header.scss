@@ -25,7 +25,9 @@ header{
             color: v.$fuente_primaria;
         }
         .nav-item{
-            border: borde;
+            border-radius: 5vh;
+            border: 1.5px solid rgb(7, 7, 7);
+            width: auto;
         }
     }
     .navclas ul li{
@@ -36,6 +38,18 @@ header{
         .navbar-collapse{
             flex-basis:100%;
             flex-grow: 1;
+        }
+        .nav-link{
+            display: grid;
+            justify-content: center;
+        }
+        .nav-link.active{
+            border-radius: 5vh;
+        }
+        .nav-item:hover{
+            background-color: ghostwhite;
+            lighting-color: ghostwhite;
+            transform: scale (1.15);
         }
     }
 }
