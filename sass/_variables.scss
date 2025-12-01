@@ -36,6 +36,13 @@ $fuente_hover: white;
 
 //MIXIN RESPONSIVE
 
+@mixin tablet{
+    @media (min-width: 431px) and (max-width: 800px){
+        @content;
+    }
+}
+
+
 @mixin mobile{
     @media (min-width:  310px) and (max-width: 430px){
         @content;
@@ -46,7 +53,9 @@ $fuente_hover: white;
 
 %card-eventos{
     padding: 10px;
-    width: 60vw;
+    margin-top: 0%;
+    font-size: 1rem;
+    width: 80vw;
     border: 2px solid black;
     border-radius: 25px;
     @include flex(column, center, center, wrap);

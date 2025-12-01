@@ -45,6 +45,16 @@
         }
     }
     }
+
+    @include v.tablet{
+        flex-direction: column;
+
+        iframe {
+            width: 75vw;
+        }
+    }
+    
+
     @include v.mobile {
         flex-direction: column;
 

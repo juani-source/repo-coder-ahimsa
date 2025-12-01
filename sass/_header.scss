@@ -34,6 +34,26 @@ header{
         align-items: center;
         list-style: none;
     }
+
+    @include v.tablet{
+        .navbar-collapse{
+            flex-basis:100%;
+            flex-grow: 1;
+        }
+        .nav-link{
+            display: grid;
+            justify-content: center;
+        }
+        .nav-link.active{
+            border-radius: 5vh;
+        }
+        .nav-item:hover{
+            background-color: ghostwhite;
+            lighting-color: ghostwhite;
+            transform: scale (1.15);
+        }
+    }
+
     @include v.mobile{
         .navbar-collapse{
             flex-basis:100%;

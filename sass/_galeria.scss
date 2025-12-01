@@ -89,6 +89,80 @@ img:hover{
         scale: 1.7;
     }
 }
+
+@include v.tablet{
+    .contenedor-body{
+    max-width: 100%;
+    width: 100vw;
+    background: #eeb1ae;
+    background: radial-gradient(circle, rgba(238, 177, 174, 1) 24%, rgba(148, 187, 233, 1) 78%, rgba(195, 207, 219, 1) 92%);
+}
+main.galeria{
+    width: 30vw;
+    grid-template-areas: 
+    "buno"
+    "bdos"
+    "btres"
+    "bcuatro"
+    "bcinco"
+    "bseis"
+    "bsiete"
+    "bocho"
+    "bnueve"
+    "bdiez"
+    "bonce"
+    "bdoce"
+    "btrece"
+    "bcatorce";
+
+.banneruno{
+    
+    grid-area: buno;
+}
+.bannerdos{
+    grid-area: bdos;
+}
+.bannertres{
+    grid-area: btres;
+}
+.bannercuatro{
+    grid-area: bcuatro;
+}
+.bannercinco{
+    grid-area: bcinco;
+}
+.bannerseis{
+    grid-area: bseis;
+}
+.bannersiete{
+    grid-area: bsiete;
+}
+.bannerocho{
+    grid-area: bocho;
+}
+.bannernueve{
+    grid-area: bnueve;
+}
+.bannerdiez{
+    grid-area: bdiez;
+}
+.banneronce{
+    grid-area: bonce;
+    width: 20vw;
+}
+.bannerdoce{
+    grid-area: bdoce;
+}
+.bannertrece{
+    grid-area: btrece;
+}
+.bannercatorce{
+    grid-area: bcatorce;
+}
+}
+}
+
+
 @include v.mobile {
 .contenedor-body{
     max-width: 100%;
